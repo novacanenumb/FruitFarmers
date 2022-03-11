@@ -277,9 +277,9 @@ contract FRUITBondingCalculator is IBondingCalculator {
 
     IERC20 public immutable FRUIT;
 
-    constructor( address FRUIT ) {
-        require( FRUIT != address(0) );
-        FRUIT = IERC20(FRUIT);
+    constructor( address _FRUIT ) {
+        require( _FRUIT != address(0) );
+        FRUIT = IERC20(_FRUIT);
     }
 
     function getKValue( address _pair ) public view returns( uint k_ ) {
